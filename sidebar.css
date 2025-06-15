@@ -1,0 +1,134 @@
+/* Sidebar Styles */
+.sidebar-container {
+    width: 250px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.header-section {
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.company-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-name {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+}
+
+.company-name2 {
+    font-weight: 600;
+    font-size: 14px;
+    color: #0561FC;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #555;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-item i {
+    margin-right: 10px;
+    font-size: 18px;
+    width: 24px;
+}
+
+.nav-text {
+    font-size: 14px;
+}
+
+.nav-item.active {
+    color: #0561FC;
+    background-color: #f0f7ff;
+    font-weight: 500;
+    border-left: 3px solid #0561FC;
+}
+
+.nav-item:hover {
+    background-color: #f0f7ff;
+    color: #0561FC;
+}
+
+.badge {
+    position: absolute;
+    right: 15px;
+    background-color: #ff3e3e;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.footer-section {
+    padding: 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 991px) {
+    .sidebar-container {
+        width: 70px;
+    }
+    
+    .company-text,
+    .nav-text {
+        display: none;
+    }
+    
+    .nav-container {
+        align-items: center;
+    }
+    
+    .nav-item {
+        justify-content: center;
+        padding: 15px 0;
+    }
+    
+    .nav-item i {
+        margin-right: 0;
+        font-size: 20px;
+    }
+}
